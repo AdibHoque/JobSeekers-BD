@@ -1,0 +1,74 @@
+[
+  {
+    "category": "onsite",
+    "name": "ABC Company",
+    "job_title": "Software Engineer",
+    "job_posting_date": "2024-05-01",
+    "application_deadline": "2024-06-01",
+    "salary_range": "$60,000 - $80,000",
+    "job_applicants_number": 50
+  },
+  {
+    "category": "onsite",
+    "name": "XYZ Corporation",
+    "job_title": "Marketing Manager",
+    "job_posting_date": "2024-04-15",
+    "application_deadline": "2024-05-15",
+    "salary_range": "$70,000 - $90,000",
+    "job_applicants_number": 40
+  },
+  {
+    "category": "remote",
+    "name": "PQR Tech Solutions",
+    "job_title": "Data Analyst",
+    "job_posting_date": "2024-04-25",
+    "application_deadline": "2024-05-25",
+    "salary_range": "$50,000 - $70,000",
+    "job_applicants_number": 60
+  },
+  {
+    "category": "remote",
+    "name": "LMN Enterprises",
+    "job_title": "Content Writer",
+    "job_posting_date": "2024-05-05",
+    "application_deadline": "2024-06-05",
+    "salary_range": "$40,000 - $60,000",
+    "job_applicants_number": 30
+  },
+  {
+    "category": "parttime",
+    "name": "EFG Inc.",
+    "job_title": "Graphic Designer",
+    "job_posting_date": "2024-05-02",
+    "application_deadline": "2024-06-02",
+    "salary_range": "$25 - $35 per hour",
+    "job_applicants_number": 20
+  },
+  {
+    "category": "parttime",
+    "name": "QRS Services",
+    "job_title": "Customer Support Representative",
+    "job_posting_date": "2024-04-20",
+    "application_deadline": "2024-05-20",
+    "salary_range": "$15 - $20 per hour",
+    "job_applicants_number": 35
+  },
+  {
+    "category": "hybrid",
+    "name": "LMN Enterprises",
+    "job_title": "Business Analyst",
+    "job_posting_date": "2024-04-30",
+    "application_deadline": "2024-05-30",
+    "salary_range": "$80,000 - $100,000",
+    "job_applicants_number": 45
+  },
+  {
+    "category": "hybrid",
+    "name": "TUV Solutions",
+    "job_title": "Project Manager",
+    "job_posting_date": "2024-05-10",
+    "application_deadline": "2024-06-10",
+    "salary_range": "$90,000 - $110,000",
+    "job_applicants_number": 55
+  }
+]
