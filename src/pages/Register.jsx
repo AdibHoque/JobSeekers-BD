@@ -5,10 +5,10 @@ import {useContext, useEffect, useState} from "react";
 import {AuthContext} from "../AuthProvider";
 import {useNavigate} from "react-router-dom";
 import {FaEyeSlash, FaEye} from "react-icons/fa";
-import loginVector from "../assets/Login-amico.svg";
+import registerVector from "../assets/Sign up-amico.svg";
 
-export default function Login() {
-  const {user, logIn, errorMessage, googleLogIn, githubLogIn} =
+export default function Register() {
+  const {user, createUser, errorMessage, googleLogIn, githubLogIn} =
     useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
@@ -18,24 +18,50 @@ export default function Login() {
       navigate("/");
     }
   }, [user, navigate]);
-
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
-    logIn(email, password);
+    const username = form.get("username");
+    const photo = form.get("photo");
+
+    createUser(email, password, username, photo);
   };
   return (
     <>
-      <div className="hero min-h-[88vh] bg-base-200 animate__animated animate__slideInLeft">
-        <div className="w-full hero-content flex flex-col lg:flex-row gap-x-10">
-          <img className="w-96" src={loginVector} alt="" />
-          <div className="w-full max-w-md border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
+      <div className="hero min-h-[86vh] bg-base-200 animate__animated animate__slideInRight">
+        <div className="hero-content flex flex-col lg:flex-row gap-10">
+          <img className="w-96" src={registerVector} alt="" />
+          <div className="w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
+            <form onSubmit={handleRegister} className="card-body w-full">
               <caption className="text-2xl font-bold text-primary">
-                Login
+                Register
               </caption>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Username</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your Username"
+                  name="username"
+                  className="rounded-xs input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="url"
+                  placeholder="URL of photo"
+                  name="photo"
+                  className="rounded-xs input input-bordered"
+                  required
+                />
+              </div>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -67,14 +93,10 @@ export default function Login() {
                     {showpass ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                   </span>
                 </div>
-
                 <label className="label">
-                  <Link
-                    to="/register"
-                    className="label-text-alt link link-hover"
-                  >
-                    Don&#39;t have an account?
-                    <span className="text-blue-600 underline"> Register</span>
+                  <Link to="/login" className="label-text-alt link link-hover">
+                    Already have an account?
+                    <span className="text-blue-600 underline"> Login</span>
                   </Link>
                 </label>
               </div>
@@ -93,11 +115,10 @@ export default function Login() {
                 </a>
               </div>
               <div className="mt-2 form-control">
-                <button className="font-bold hover:text-primary bg-primary rounded-xs btn text-gray-950 ">
-                  Login
+                <button className="font-bold  hover:text-primary bg-primary rounded-xs btn text-gray-950">
+                  Register
                 </button>
               </div>
-
               {errorMessage ? (
                 <h3 className="text-red-600">{errorMessage}</h3>
               ) : (
