@@ -26,7 +26,7 @@ export default {
           ...require("daisyui/src/theming/themes")["dark"],
           "primary": "#F5721B",
           "secondary": "#2D9CDB",
-          "accent": "#FADB14",
+          "accent": "#111111",
           "neutral": "#E5E5E5",
           "base-100": "#111111",
         },
