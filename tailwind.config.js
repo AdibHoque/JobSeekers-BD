@@ -21,7 +21,6 @@ export default {
           "accent": "#111111",
           "neutral": "#111111",
           "base-100": "#ffffff",
-          "muted": "#111111"
         },
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
@@ -30,7 +29,6 @@ export default {
           "accent": "#FADB14",
           "neutral": "#E5E5E5",
           "base-100": "#111111",
-
         },
       },
     ],
