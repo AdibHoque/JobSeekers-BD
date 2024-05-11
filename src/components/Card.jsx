@@ -20,7 +20,7 @@ export default function Card({data}) {
             <span className="font-bold text-black">Posted By: </span>
             {name}
           </p>
-          <div className="flex justify-between">
+          <div className="flex flex-wrap justify-between">
             <p className="flex justify-center items-center gap-1">
               <FaCalendar /> <span className="font-bold">Post Date: </span>
               {job_posting_date}
@@ -30,7 +30,7 @@ export default function Card({data}) {
               {application_deadline}
             </p>
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-wrap justify-between">
             <p className="flex justify-center items-center gap-1">
               <FaCoins /> <span className="font-bold">Salary: </span>
               {salary_range}
