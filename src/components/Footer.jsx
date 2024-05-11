@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 export default function Footer() {
   return (
     <>
-      <footer className="footer p-10 bg-[#B5E1F6] text-black mt-6">
+      <footer className="footer p-10 bg-[#B5E1F6] text-black">
         <aside>
           <img className="size-16" src={logo} alt="" />
           <p>

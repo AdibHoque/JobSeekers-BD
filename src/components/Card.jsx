@@ -43,7 +43,7 @@ export default function Card({data}) {
             </p>
           </div>
           <div className="w-full flex items-center justify-center mt-4">
-            <Link to={`/jobs/${_id}`} className="btn btn-primary">
+            <Link to={`/job/${_id}`} className="btn btn-primary">
               View Details
             </Link>
           </div>
