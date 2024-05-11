@@ -1,5 +1,5 @@
 import {FaCalendar, FaCalendarTimes, FaUser, FaCoins} from "react-icons/fa";
-import {Link, useLoaderData} from "react-router-dom";
+import {useLoaderData} from "react-router-dom";
 
 export default function JobDetails() {
   const data = useLoaderData();

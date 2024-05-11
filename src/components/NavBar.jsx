@@ -40,7 +40,7 @@ export default function NavBar() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/alltouristspots" className={navClass}>
+        <NavLink to="/jobs" className={navClass}>
           ALL JOBS
         </NavLink>
       </li>

@@ -1,7 +1,6 @@
 import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Card from "./Card";
-import {useEffect, useState} from "react";
 import {useQuery} from "@tanstack/react-query";
 
 export default function JobTabs() {
@@ -26,8 +25,8 @@ export default function JobTabs() {
     return <p>{error.message}</p>;
   }
   return (
-    <div className="px-4 lg:px-24">
-      <h1 className="text-4xl text-center md:text-5xl font-bold text-[#190D5B] my-6">
+    <div className="px-4 lg:px-24 mb-8">
+      <h1 className="text-4xl text-center md:text-5xl font-bold text-primary my-6">
         Jobs By Category
       </h1>
       <Tabs>
