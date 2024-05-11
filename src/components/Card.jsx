@@ -1,7 +1,9 @@
 import {FaCalendar, FaCalendarTimes, FaUser, FaCoins} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 export default function Card({data}) {
   const {
+    _id,
     name,
     job_title,
     job_posting_date,
@@ -23,11 +25,11 @@ export default function Card({data}) {
           <div className="flex flex-wrap justify-between">
             <p className="flex justify-center items-center gap-1">
               <FaCalendar /> <span className="font-bold">Post Date: </span>
-              {job_posting_date}
+              {new Date(job_posting_date).toLocaleDateString("en-GB")}
             </p>
             <p className="flex justify-center items-center gap-1">
               <FaCalendarTimes /> <span className="font-bold">Deadline: </span>
-              {application_deadline}
+              {new Date(application_deadline).toLocaleDateString("en-GB")}
             </p>
           </div>
           <div className="flex flex-wrap justify-between">
@@ -41,7 +43,9 @@ export default function Card({data}) {
             </p>
           </div>
           <div className="w-full flex items-center justify-center mt-4">
-            <button className="btn btn-primary">View Details</button>
+            <Link to={`/jobs/${_id}`} className="btn btn-primary">
+              View Details
+            </Link>
           </div>
         </div>
       </div>

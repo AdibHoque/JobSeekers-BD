@@ -3,72 +3,88 @@
     "category": "onsite",
     "name": "ABC Company",
     "job_title": "Software Engineer",
-    "job_posting_date": "2024-05-01",
-    "application_deadline": "2024-06-01",
+    "job_posting_date": 1733884800000,
+    "application_deadline": 1736140800000,
     "salary_range": "$60,000 - $80,000",
-    "job_applicants_number": 50
+    "job_applicants_number": 50,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "Join our innovative team at ABC Company as a Software Engineer. You'll be responsible for developing high-quality software solutions, collaborating with cross-functional teams, and contributing to the design and architecture of our products. We're looking for someone with strong problem-solving skills and a passion for technology."
   },
   {
     "category": "onsite",
     "name": "XYZ Corporation",
     "job_title": "Marketing Manager",
-    "job_posting_date": "2024-04-15",
-    "application_deadline": "2024-05-15",
+    "job_posting_date": 1731561600000,
+    "application_deadline": 1733774400000,
     "salary_range": "$70,000 - $90,000",
-    "job_applicants_number": 40
+    "job_applicants_number": 40,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "XYZ Corporation is seeking a talented Marketing Manager to lead our marketing initiatives. You'll develop and implement marketing strategies to drive customer acquisition and retention, manage marketing campaigns, and analyze market trends. This role requires strong leadership skills and a creative mindset."
   },
   {
     "category": "remote",
     "name": "PQR Tech Solutions",
     "job_title": "Data Analyst",
-    "job_posting_date": "2024-04-25",
-    "application_deadline": "2024-05-25",
+    "job_posting_date": 1732281600000,
+    "application_deadline": 1734484800000,
     "salary_range": "$50,000 - $70,000",
-    "job_applicants_number": 60
+    "job_applicants_number": 60,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "Join PQR Tech Solutions as a Data Analyst and play a key role in analyzing complex datasets to uncover insights and inform business decisions. You'll work closely with stakeholders to identify data requirements, develop data models, and create visualizations. We're looking for candidates with strong analytical skills and experience with data analysis tools."
   },
   {
     "category": "remote",
     "name": "LMN Enterprises",
     "job_title": "Content Writer",
-    "job_posting_date": "2024-05-05",
-    "application_deadline": "2024-06-05",
+    "job_posting_date": 1733145600000,
+    "application_deadline": 1735430400000,
     "salary_range": "$40,000 - $60,000",
-    "job_applicants_number": 30
+    "job_applicants_number": 30,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "LMN Enterprises is looking for a talented Content Writer to join our remote team. In this role, you'll create engaging content for our website, blog posts, social media, and marketing materials. We're seeking candidates with excellent writing skills, creativity, and the ability to generate original content."
   },
   {
     "category": "parttime",
     "name": "EFG Inc.",
     "job_title": "Graphic Designer",
-    "job_posting_date": "2024-05-02",
-    "application_deadline": "2024-06-02",
+    "job_posting_date": 1733395200000,
+    "application_deadline": 1735660800000,
     "salary_range": "$25 - $35 per hour",
-    "job_applicants_number": 20
+    "job_applicants_number": 20,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "EFG Inc. is hiring a part-time Graphic Designer to create visually appealing designs for our marketing materials, websites, and branding projects. You'll collaborate with our creative team to develop innovative design concepts and ensure consistency across all marketing channels. We're looking for candidates with a strong portfolio and proficiency in design software."
   },
   {
     "category": "parttime",
     "name": "QRS Services",
     "job_title": "Customer Support Representative",
-    "job_posting_date": "2024-04-20",
-    "application_deadline": "2024-05-20",
+    "job_posting_date": 1732060800000,
+    "application_deadline": 1734427200000,
     "salary_range": "$15 - $20 per hour",
-    "job_applicants_number": 35
+    "job_applicants_number": 35,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "Join QRS Services as a part-time Customer Support Representative and provide exceptional customer service to our clients. You'll handle inquiries, resolve issues, and ensure customer satisfaction through various communication channels. We're looking for candidates with strong communication skills and a customer-focused attitude."
   },
   {
     "category": "hybrid",
     "name": "LMN Enterprises",
     "job_title": "Business Analyst",
-    "job_posting_date": "2024-04-30",
-    "application_deadline": "2024-05-30",
+    "job_posting_date": 1732963200000,
+    "application_deadline": 1735248000000,
     "salary_range": "$80,000 - $100,000",
-    "job_applicants_number": 45
+    "job_applicants_number": 45,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "LMN Enterprises is seeking a skilled Business Analyst to join our hybrid team. In this role, you'll analyze business processes, gather requirements, and recommend solutions to improve efficiency and effectiveness. You'll collaborate with stakeholders to define project scope and objectives. We're looking for candidates with strong analytical skills and business acumen."
   },
   {
     "category": "hybrid",
     "name": "TUV Solutions",
     "job_title": "Project Manager",
-    "job_posting_date": "2024-05-10",
-    "application_deadline": "2024-06-10",
+    "job_posting_date": 1733817600000,
+    "application_deadline": 1736174400000,
     "salary_range": "$90,000 - $110,000",
-    "job_applicants_number": 55
+    "job_applicants_number": 55,
+    "image": "https://i.ibb.co/GHyp5Fr/Job-hunt-cuate-1.png",
+    "job_description": "Join TUV Solutions as a Project Manager and lead cross-functional teams to deliver projects on time and within budget. You'll oversee project planning, execution, and monitoring, ensuring that project objectives are met. We're seeking candidates with strong leadership skills, project management experience, and the ability to drive results."
   }
 ]
