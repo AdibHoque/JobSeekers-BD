@@ -1,18 +1,46 @@
 import {useQuery} from "@tanstack/react-query";
 import {Link} from "react-router-dom";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {AuthContext} from "../AuthProvider";
+import UseSwal from "../hooks/useSwal";
 
-export default function AllJobs() {
+const MySwal = UseSwal();
+
+function deleteSpot(id) {
+  MySwal.fire({
+    title: "Delete?",
+    text: "This data will be lost forever if you delete. Are you sure you want to Delete?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Delete",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch(`http://localhost:5000/jobs?id=${id}`, {
+        method: "DELETE",
+      });
+      MySwal.fire({
+        title: "Deleted!",
+        text: "The Data has been deleted",
+        icon: "success",
+      });
+    }
+  });
+}
+
+export default function MyJobs() {
+  const {user} = useContext(AuthContext);
   const [search, setSearch] = useState("");
   const {
     isPending,
     isError,
     error,
-    data: jobs,
+    data: myjobs,
   } = useQuery({
-    queryKey: ["jobs"],
+    queryKey: ["myjobs"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/jobs");
+      const res = await fetch(`http://localhost:5000/jobs?email=${user.email}`);
       return res.json();
     },
   });
@@ -28,12 +56,13 @@ export default function AllJobs() {
     <div className="lg:px-24 px-4">
       <div className="my-6">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
-          All Jobs
+          My Jobs
         </h1>
         <p className="text-center my-1">
-          List of all the Jobs Available at the moment.
+          List of Jobs that you have added as the employeer.
         </p>
       </div>
+
       <label className="input input-bordered flex items-center gap-2 my-2">
         <input
           onChange={(e) => setSearch(e.target.value)}
@@ -66,7 +95,7 @@ export default function AllJobs() {
             </tr>
           </thead>
           <tbody>
-            {jobs
+            {myjobs
               .filter((j) =>
                 j.job_title.toLowerCase().includes(search.toLowerCase())
               )
@@ -82,19 +111,25 @@ export default function AllJobs() {
                     )}
                   </td>
                   <td>{j.salary_range}</td>
-                  <td>
+                  <td className="flex flex=wrap gap-2">
                     <Link
                       to={`/job/${j._id}`}
-                      className="btn btn-primary btn-xs"
+                      className="btn btn-warning btn-xs"
                     >
-                      Details
+                      Update
                     </Link>
+                    <button
+                      onClick={() => deleteSpot(j._id)}
+                      className="btn bg-red-500 btn-error btn-xs"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}
           </tbody>
         </table>
-        {jobs.filter((j) =>
+        {myjobs.filter((j) =>
           j.job_title.toLowerCase().includes(search.toLowerCase())
         ).length === 0 ? (
           <h1 className="text-xl text-center">No Job Matches Your Search.</h1>

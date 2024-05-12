@@ -54,8 +54,16 @@ export default function AddJobs() {
       });
   };
   return (
-    <>
-      <div className="hero min-h-[86vh] bg-base-200 animate__animated animate__slideInRight">
+    <div className="bg-base-200 lg:px-24">
+      <div className="py-6">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
+          Add a Job
+        </h1>
+        <p className="text-center my-1">
+          Become an employeer by adding your Job recruitment.
+        </p>
+      </div>
+      <div className="hero min-h-[86vh] bg-base-200 pb-6">
         <div className="hero-content flex flex-col lg:flex-row gap-10">
           <img src={jobVector} alt="" />
           <div className="flex-grow max-w-lg max-sm:w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
@@ -151,7 +159,7 @@ export default function AddJobs() {
                   </label>
                   <DatePicker
                     selected={new Date()}
-                    className="rounded-none input input-bordered"
+                    className="rounded-none input input-bordered w-full"
                     disabled
                     required
                   />
@@ -164,7 +172,7 @@ export default function AddJobs() {
                     selected={startDate}
                     defaultValue={startDate}
                     onChange={(date) => setStartDate(date)}
-                    className="rounded-none input input-bordered"
+                    className="rounded-none input input-bordered w-full"
                     name="deadline"
                     required
                   />
@@ -206,6 +214,6 @@ export default function AddJobs() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
