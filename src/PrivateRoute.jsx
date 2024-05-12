@@ -1,17 +1,15 @@
 import {useContext} from "react";
 import {AuthContext} from "./AuthProvider";
 import {Navigate} from "react-router-dom";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 import PropTypes from "prop-types";
-
-const MySwal = withReactContent(Swal);
+import UseSwal from "./hooks/useSwal";
 
 PrivateRoute.propTypes = {
   children: PropTypes.node,
 };
 
 export default function PrivateRoute({children}) {
+  const MySwal = UseSwal();
   const {user, loading} = useContext(AuthContext);
   if (loading) {
     return (

@@ -12,11 +12,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
+import UseSwal from "./hooks/useSwal";
 
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-
-const MySwal = withReactContent(Swal);
+const MySwal = UseSwal();
 
 export const AuthContext = createContext(null);
 
@@ -264,7 +262,7 @@ export default function AuthProvider({children}) {
     }).then((result) => {
       if (result.isConfirmed) {
         signOut(auth);
-        Swal.fire({
+        MySwal.fire({
           title: "Logged Out!",
           text: "Your account is signed out.",
           icon: "success",

@@ -1,18 +1,14 @@
-import {FcGoogle} from "react-icons/fc";
-import {FaGithub} from "react-icons/fa";
-import {Link} from "react-router-dom";
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {AuthContext} from "../AuthProvider";
-import {useNavigate} from "react-router-dom";
-import {FaEyeSlash, FaEye} from "react-icons/fa";
 import jobVector from "../assets/Design team-bro.svg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import UseSwal from "../hooks/useSwal";
 
 export default function AddJobs() {
   const {user} = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
-  const navigate = useNavigate();
+  const MySwal = UseSwal();
 
   const handleAdd = (e) => {
     e.preventDefault();
@@ -37,7 +33,25 @@ export default function AddJobs() {
       image: photo,
       job_description: description,
     };
-    console.log(obj);
+    fetch("http://localhost:5000/jobs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then(() => {
+        MySwal.fire({
+          position: "center",
+          icon: "success",
+          title: "Successfully Added New Job!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <>

@@ -4,12 +4,9 @@ import {AuthContext} from "../AuthProvider";
 import logo from "../assets/logo.svg";
 import {
   FaUserCircle,
-  FaHome,
   FaSignInAlt,
   FaSignOutAlt,
   FaUserPlus,
-  FaPlus,
-  FaList,
 } from "react-icons/fa";
 
 export default function NavBar() {

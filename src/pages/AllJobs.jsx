@@ -1,5 +1,4 @@
 import {useQuery} from "@tanstack/react-query";
-import Card from "../components/Card";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 
