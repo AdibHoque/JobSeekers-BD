@@ -51,7 +51,7 @@ export default function AllJobs() {
           />
         </svg>
       </label>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto my-6">
         <table className="table table-xs md:table-md lg:table-lg">
           <thead>
             <tr>

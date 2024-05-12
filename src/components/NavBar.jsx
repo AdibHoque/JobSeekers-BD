@@ -50,7 +50,7 @@ export default function NavBar() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/addtouristspot" className={navClass}>
+        <NavLink to="/addjob" className={navClass}>
           ADD A JOB
         </NavLink>
       </li>
@@ -110,9 +110,14 @@ export default function NavBar() {
             <details className="dropdown dropdown-end">
               <summary className="text-4xl text-white btn btn-circle btn-ghost">
                 {user.photoURL ? (
-                  <div className="avatar">
-                    <div className="w-10 rounded-full">
-                      <img src={user.photoURL} />
+                  <div
+                    className="tooltip tooltip-left tooltip-primary"
+                    data-tip={user.email + ` - Click to Logout`}
+                  >
+                    <div className="avatar">
+                      <div className="w-10 rounded-full">
+                        <img src={user.photoURL} />
+                      </div>
                     </div>
                   </div>
                 ) : (
@@ -123,7 +128,7 @@ export default function NavBar() {
                 <li>
                   <button
                     onClick={logOut}
-                    className="btn btn-outline bg-transparent font-roboto border-muted border-2 text-muted rounded-xs hover:border-primary hover:text-primary hover:bg-[#202020]"
+                    className="btn btn-outline bg-transparent font-roboto border-muted border-2 text-muted rounded-xs hover:border-primary hover:text-primary hover:bg-transparent"
                   >
                     <FaSignOutAlt className="text-2xl" />
                     <span className="">LOGOUT</span>
