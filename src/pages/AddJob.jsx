@@ -17,8 +17,6 @@ export default function AddJobs() {
   const handleAdd = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    const email = form.get("email");
-    const username = form.get("username");
     const job_name = form.get("job_name");
     const description = form.get("description");
     const photo = form.get("photo");
@@ -29,8 +27,8 @@ export default function AddJobs() {
     const applicants = 0;
     const obj = {
       category: category_name,
-      name: username,
-      email: email,
+      name: user.displayName,
+      email: user.email,
       job_title: job_name,
       job_posting_date: new Date(postdate).getTime(),
       application_deadline: new Date(deadline).getTime(),
