@@ -13,7 +13,7 @@ export default function Card({data}) {
   } = data;
   return (
     <>
-      <div className="card bg-[#B5E1F6] text-black shadow-xl">
+      <div className="card bg-[#B5E1F6] text-black shadow-sm">
         <div className="p-10">
           <h2 className="card-title font-extrabold text-[#190D5B]">
             {job_title}

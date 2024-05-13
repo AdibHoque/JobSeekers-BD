@@ -38,36 +38,36 @@ export default function JobTabs() {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {jobs
-              .filter((d) => d.category == "onsite")
+              .filter((d) => d.category == "Onsite")
               .map((t) => (
                 <Card key={t._id} data={t}></Card>
               ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {jobs
-              .filter((d) => d.category == "remote")
+              .filter((d) => d.category == "Remote")
               .map((t) => (
                 <Card key={t._id} data={t}></Card>
               ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {jobs
-              .filter((d) => d.category == "parttime")
+              .filter((d) => d.category == "Part-Time")
               .map((t) => (
                 <Card key={t._id} data={t}></Card>
               ))}
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {jobs
-              .filter((d) => d.category == "hybrid")
+              .filter((d) => d.category == "Hybrid")
               .map((t) => (
                 <Card key={t._id} data={t}></Card>
               ))}

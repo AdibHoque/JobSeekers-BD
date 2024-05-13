@@ -1,6 +1,6 @@
 import {FcGoogle} from "react-icons/fc";
 import {FaGithub} from "react-icons/fa";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {useContext, useEffect, useState} from "react";
 import {AuthContext} from "../AuthProvider";
 import {useNavigate} from "react-router-dom";
@@ -12,10 +12,11 @@ export default function Login() {
     useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (user) {
-      navigate("/");
+      navigate(location?.state ? location?.state : "/");
     }
   }, [user, navigate]);
 

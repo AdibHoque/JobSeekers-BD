@@ -113,7 +113,7 @@ export default function MyJobs() {
                   <td>{j.salary_range}</td>
                   <td className="flex flex=wrap gap-2">
                     <Link
-                      to={`/job/${j._id}`}
+                      to={`/update/${j._id}`}
                       className="btn btn-warning btn-xs"
                     >
                       Update
