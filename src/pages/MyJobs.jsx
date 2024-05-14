@@ -18,6 +18,7 @@ function deleteSpot(id) {
   }).then((result) => {
     if (result.isConfirmed) {
       fetch(`http://localhost:5000/jobs?id=${id}`, {
+        credentials: "include",
         method: "DELETE",
       });
       MySwal.fire({
@@ -40,7 +41,10 @@ export default function MyJobs() {
   } = useQuery({
     queryKey: ["myjobs"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:5000/jobs?email=${user.email}`);
+      const res = await fetch(
+        `http://localhost:5000/jobs?email=${user.email}`,
+        {credentials: "include"}
+      );
       return res.json();
     },
   });

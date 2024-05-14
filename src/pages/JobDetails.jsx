@@ -51,6 +51,7 @@ export default function JobDetails() {
       category: category,
     };
     fetch(`http://localhost:5000/appliedjobs/${_id}`, {
+      credentials: "include",
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -17,7 +17,8 @@ export default function AppliedJobs() {
     queryKey: ["myjobs"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/appliedjobs?email=${user.email}`
+        `http://localhost:5000/appliedjobs?email=${user.email}`,
+        {credentials: "include"}
       );
       return res.json();
     },

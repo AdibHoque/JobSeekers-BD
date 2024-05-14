@@ -34,6 +34,7 @@ export default function AddJobs() {
       job_description: description,
     };
     fetch("http://localhost:5000/jobs", {
+      credentials: "include",
       method: "POST",
       headers: {
         "Content-Type": "application/json",

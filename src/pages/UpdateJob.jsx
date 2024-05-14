@@ -34,6 +34,7 @@ export default function UpdateJob() {
       job_description: description,
     };
     fetch(`http://localhost:5000/jobs/${data._id}`, {
+      credentials: "include",
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
