@@ -75,9 +75,9 @@ export default function JobDetails() {
     <>
       <div className="card lg:flex-row bg-base-100 shadow-xl px-4 lg:px-24">
         <figure>
-          <img src={image} alt="JobBanner" />
+          <img className="" src={image} alt="JobBanner" />
         </figure>
-        <div className="p-10">
+        <div className="p-10 ">
           <h2 className="card-title font-extrabold text-[#190D5B] my-2">
             {job_title}
           </h2>

@@ -39,7 +39,9 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({params}) =>
-          fetch(`http://localhost:5000/jobs?id=${params.id}`),
+          fetch(`http://localhost:5000/jobs?id=${params.id}`, {
+            credentials: "include",
+          }),
       },
       {
         path: "/jobs",
@@ -81,7 +83,9 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({params}) =>
-          fetch(`http://localhost:5000/jobs?id=${params.id}`),
+          fetch(`http://localhost:5000/jobs?id=${params.id}`, {
+            credentials: "include",
+          }),
       },
     ],
   },
