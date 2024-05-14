@@ -19,7 +19,7 @@ export default function Login() {
       navigate(location?.state ? location?.state : "/");
     }
   }, [user, navigate]);
-
+  1;
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
