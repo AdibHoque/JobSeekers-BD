@@ -57,7 +57,7 @@ export default function NavBar() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/mylist" className={navClass}>
+        <NavLink to="/blogs" className={navClass}>
           BLOGS
         </NavLink>
       </li>
