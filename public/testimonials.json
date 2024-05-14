@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "job_title": "Software Engineer",
+    "company": "Tech Solutions Inc.",
+    "testimonial": "I found my dream job through this platform! The search filters made it easy to narrow down relevant opportunities, and the application process was seamless. Thank you for helping me kickstart my career!",
+    "avatar": "https://i.ibb.co/HYCSR5B/image.png"
+  },
+  {
+    "id": 2,
+    "name": "Jana Smith",
+    "job_title": "Marketing Specialist",
+    "company": "Digital Marketing Agency",
+    "testimonial": "I was impressed by the variety of job listings available on this website. It catered perfectly to my skills and preferences. Within weeks of signing up, I landed a fantastic job at a leading company. Highly recommended!",
+    "avatar": "https://i.ibb.co/c8WXgNL/image.png"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "job_title": "Nurse",
+    "company": "City Hospital",
+    "testimonial": "As a healthcare professional, finding the right job can be challenging. This platform made the process so much easier. I applied to several positions and received multiple interview offers. I'm now working in my ideal role, thanks to this website!",
+    "avatar": "https://i.ibb.co/qrjyhBh/image.png"
+  },
+  {
+    "id": 4,
+    "name": "Emily Rodriguez",
+    "job_title": "Graphic Designer",
+    "company": "Design Studio XYZ",
+    "testimonial": "I've been searching for a job that matches my creative skills and fits my personality for months. This platform not only helped me find such a job but also provided valuable resources for improving my portfolio and interview skills. I'm grateful for the support!",
+    "avatar": "https://i.ibb.co/bdyYPGD/image.png"
+  }
+]

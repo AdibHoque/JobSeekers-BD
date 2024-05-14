@@ -44,7 +44,7 @@ export default function UpdateJob() {
         MySwal.fire({
           position: "center",
           icon: "success",
-          title: "Successfully Updated The Job!",
+          text: "Successfully Updated The Job!",
           showConfirmButton: false,
           timer: 1500,
         });

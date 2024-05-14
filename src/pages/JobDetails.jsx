@@ -26,7 +26,7 @@ export default function JobDetails() {
       return MySwal.fire({
         position: "center",
         icon: "error",
-        title: "You cannot apply for your own job.",
+        text: "You cannot apply for your own job.",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -115,6 +115,11 @@ export default function JobDetails() {
               className="modal modal-bottom sm:modal-middle"
             >
               <div className="modal-box">
+                <form method="dialog">
+                  <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                    ✕
+                  </button>
+                </form>
                 <form onSubmit={handleSubmit} method="dialog">
                   <div className="form-control">
                     <label className="label">

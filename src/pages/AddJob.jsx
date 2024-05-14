@@ -44,7 +44,7 @@ export default function AddJobs() {
         MySwal.fire({
           position: "center",
           icon: "success",
-          title: "Successfully Added New Job!",
+          text: "Successfully Added New Job!",
           showConfirmButton: false,
           timer: 1500,
         });

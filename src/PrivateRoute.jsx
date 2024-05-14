@@ -23,7 +23,7 @@ export default function PrivateRoute({children}) {
   MySwal.fire({
     position: "center",
     icon: "error",
-    title: "Kindly Login first to enter this page.",
+    text: "Kindly Login first to enter this page.",
     showConfirmButton: false,
     timer: 2000,
   });

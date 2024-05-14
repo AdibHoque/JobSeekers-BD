@@ -26,9 +26,15 @@ export default function JobTabs() {
   }
   return (
     <div className="px-4 lg:px-24 mb-8">
-      <h1 className="text-4xl text-center md:text-5xl font-bold text-primary my-6">
-        Jobs By Category
-      </h1>
+      <div className="my-6">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
+          Jobs by Category
+        </h1>
+        <p className="text-center my-1">
+          Discover career opportunities tailored to your preferences by
+          exploring jobs categorized by industry.
+        </p>
+      </div>
       <Tabs>
         <TabList>
           <Tab>On Site</Tab>

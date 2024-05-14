@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 function Blog({data}) {
   const {title, image, content1, content2, content3, content4, content5} = data;
   return (
-    <div className="w-full flex flex-col gap-y-6">
+    <div className="w-full flex flex-col gap-y-6 border border-slate-400 rounded p-2">
       <img className="md:h-[70vh] w-full" src={image} alt="" />
 
       <div>

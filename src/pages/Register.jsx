@@ -33,7 +33,7 @@ export default function Register() {
       <div className="hero min-h-[86vh] bg-base-200 animate__animated animate__slideInRight">
         <div className="hero-content flex flex-col lg:flex-row gap-10">
           <img className="w-96" src={registerVector} alt="" />
-          <div className="flex-1 w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
+          <div className="flex-1 w-full md:w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
             <form onSubmit={handleRegister} className="card-body w-full">
               <caption className="text-2xl font-bold text-primary">
                 Register

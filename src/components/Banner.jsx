@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import banner from "../assets/Job hunt-amico.svg";
 
 export default function Banner() {
@@ -16,12 +17,18 @@ export default function Banner() {
               at every stage of their career, we offer a myriad of resources and
               opportunities tailored to your unique aspirations.
             </p>
-            <button className="btn text-center btn-secondary font-bold mx-1">
+            <Link
+              to="/addjob"
+              className="btn text-center btn-secondary font-bold mx-1"
+            >
               HIRE EMPLOYEE
-            </button>
-            <button className="btn btn-primary font-bold btn-outline mx-1">
+            </Link>
+            <Link
+              to="/jobs"
+              className="btn btn-primary font-bold btn-outline mx-1"
+            >
               GET HIRED
-            </button>
+            </Link>
           </div>
         </div>
       </div>
