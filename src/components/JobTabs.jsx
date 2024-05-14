@@ -32,7 +32,7 @@ export default function JobTabs() {
         </h1>
         <p className="text-center my-1">
           Discover career opportunities tailored to your preferences by
-          exploring jobs categorized by industry.
+          exploring jobs categorized by industry
         </p>
       </div>
       <Tabs>
