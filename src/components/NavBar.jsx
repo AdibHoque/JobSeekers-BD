@@ -42,7 +42,7 @@ export default function NavBar() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/addtouristspot" className={navClass}>
+        <NavLink to="/appliedjobs" className={navClass}>
           APPLIED JOBS
         </NavLink>
       </li>
