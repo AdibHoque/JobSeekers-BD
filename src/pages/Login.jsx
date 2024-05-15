@@ -79,6 +79,12 @@ export default function Login() {
                   </Link>
                 </label>
               </div>
+
+              <div className="mt-2 form-control">
+                <button className="font-bold hover:text-primary bg-primary rounded-xs btn text-gray-950 ">
+                  Login
+                </button>
+              </div>
               <div className="divider">OR</div>
               <div className="w-full flex items-center justify-center">
                 <a
@@ -89,12 +95,6 @@ export default function Login() {
                   Sign in with Google
                 </a>
               </div>
-              <div className="mt-2 form-control">
-                <button className="font-bold hover:text-primary bg-primary rounded-xs btn text-gray-950 ">
-                  Login
-                </button>
-              </div>
-
               {errorMessage ? (
                 <h3 className="text-red-600">{errorMessage}</h3>
               ) : (
