@@ -2,7 +2,7 @@ export default function Testimonial({data}) {
   const {name, job_title, company, testimonial, avatar} = data;
 
   return (
-    <div className="flex flex-col items-center  md:flex-row gap-4">
+    <div className="flex flex-col items-center md:flex-row gap-4">
       <div className="avatar">
         <div className="w-56 rounded-xl">
           <img src={avatar} />

@@ -100,18 +100,14 @@ export default function Register() {
                   </Link>
                 </label>
               </div>
-              <div className="flex items-center justify-center gap-5">
+              <div className="divider">OR</div>
+              <div className="w-full flex items-center justify-center">
                 <a
                   onClick={googleLogIn}
-                  className="text-3xl btn btn-circle border hover:border-primary"
+                  className=" btn border hover:border-primary border-slate-400 rounded-3xl"
                 >
-                  <FcGoogle />
-                </a>
-                <a
-                  onClick={githubLogIn}
-                  className="text-3xl btn btn-circle border hover:border-primary"
-                >
-                  <FaGithub />
+                  <FcGoogle className="text-3xl" />
+                  Sign in with Google
                 </a>
               </div>
               <div className="mt-2 form-control">

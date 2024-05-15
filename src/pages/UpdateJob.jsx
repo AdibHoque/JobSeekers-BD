@@ -33,7 +33,7 @@ export default function UpdateJob() {
       image: photo,
       job_description: description,
     };
-    fetch(`http://localhost:5000/jobs/${data._id}`, {
+    fetch(`https://assignment-11-api.vercel.app/jobs/${data._id}`, {
       credentials: "include",
       method: "PUT",
       headers: {

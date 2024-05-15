@@ -42,6 +42,13 @@ export default function Blogs() {
       .then((data) => data.json())
       .then((data) => setData(data));
   }, []);
+  if (data.length === 0) {
+    return (
+      <div className="flex justify-center w-full">
+        <span className="text-primary loading loading-spinner size-40"></span>
+      </div>
+    );
+  }
   return (
     <>
       <div className="lg:px-24 px-4">

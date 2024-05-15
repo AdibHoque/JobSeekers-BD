@@ -41,21 +41,27 @@ export default function NavBar() {
           ALL JOBS
         </NavLink>
       </li>
-      <li>
-        <NavLink to="/appliedjobs" className={navClass}>
-          APPLIED JOBS
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/addjob" className={navClass}>
-          ADD A JOB
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/myjobs" className={navClass}>
-          MY JOBS
-        </NavLink>
-      </li>
+      {user ? (
+        <>
+          <li>
+            <NavLink to="/appliedjobs" className={navClass}>
+              APPLIED JOBS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/addjob" className={navClass}>
+              ADD A JOB
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/myjobs" className={navClass}>
+              MY JOBS
+            </NavLink>
+          </li>
+        </>
+      ) : (
+        ""
+      )}
       <li>
         <NavLink to="/blogs" className={navClass}>
           BLOGS

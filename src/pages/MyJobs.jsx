@@ -17,7 +17,7 @@ function deleteSpot(id) {
     confirmButtonText: "Delete",
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`http://localhost:5000/jobs?id=${id}`, {
+      fetch(`https://assignment-11-api.vercel.app/jobs?id=${id}`, {
         credentials: "include",
         method: "DELETE",
       });
@@ -42,7 +42,7 @@ export default function MyJobs() {
     queryKey: ["myjobs"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/jobs?email=${user.email}`,
+        `https://assignment-11-api.vercel.app/jobs?email=${user.email}`,
         {credentials: "include"}
       );
       return res.json();
@@ -50,7 +50,11 @@ export default function MyJobs() {
   });
 
   if (isPending) {
-    return <span className="loading loading-spinner text-primary"></span>;
+    return (
+      <div className="flex justify-center w-full">
+        <span className="text-primary loading loading-spinner size-40"></span>
+      </div>
+    );
   }
 
   if (isError) {
@@ -88,7 +92,7 @@ export default function MyJobs() {
         </svg>
       </label>
       <div className="overflow-x-auto my-6">
-        <table className="table table-xs md:table-md lg:table-lg">
+        <table className="table table-zebra table-xs md:table-md lg:table-lg">
           <thead>
             <tr>
               <th>Job Title</th>

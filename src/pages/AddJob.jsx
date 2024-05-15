@@ -33,7 +33,7 @@ export default function AddJobs() {
       image: photo,
       job_description: description,
     };
-    fetch("http://localhost:5000/jobs", {
+    fetch("https://assignment-11-api.vercel.app/jobs", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -67,8 +67,8 @@ export default function AddJobs() {
       <div className="hero min-h-[86vh] bg-base-200 pb-6">
         <div className="hero-content flex flex-col lg:flex-row gap-10">
           <img src={jobVector} alt="" />
-          <div className="flex-grow max-w-lg max-sm:w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
-            <form onSubmit={handleAdd} className="p-6 ">
+          <div className="flex-1 w-full border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
+            <form onSubmit={handleAdd} className="p-6 max-sm:px-10">
               <div className="flex flex-col gap-x-6 md:flex-row">
                 <div className="form-control">
                   <label className="label">

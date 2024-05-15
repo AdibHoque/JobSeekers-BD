@@ -9,7 +9,7 @@ export default function Testimons() {
       .then((data) => setData(data));
   }, []);
   return (
-    <div className="my-6 bg-base-200 py-4 pb-8">
+    <div className="my-6 pb-4">
       <div className="my-6">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
           Testimonials

@@ -33,7 +33,7 @@ export default function FAQ() {
           FAQ
         </h1>
         <p className="text-center my-1">
-          Answer to the Questions frequently asked by our clients
+          Frequently asked questions by our clients
         </p>
       </div>
       <div className="hero">

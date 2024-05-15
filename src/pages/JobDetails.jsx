@@ -50,7 +50,7 @@ export default function JobDetails() {
       job_title: job_title,
       category: category,
     };
-    fetch(`http://localhost:5000/appliedjobs/${_id}`, {
+    fetch(`https://assignment-11-api.vercel.app/appliedjobs/${_id}`, {
       credentials: "include",
       method: "POST",
       headers: {
@@ -77,8 +77,8 @@ export default function JobDetails() {
         <figure>
           <img className="" src={image} alt="JobBanner" />
         </figure>
-        <div className="p-10 ">
-          <h2 className="card-title font-extrabold text-[#190D5B] my-2">
+        <div className="p-4 md:p-10 ">
+          <h2 className="card-title font-extrabold text-primary my-2">
             {job_title}
           </h2>
           <hr></hr>

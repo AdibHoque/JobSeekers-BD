@@ -12,7 +12,7 @@ export default function JobTabs() {
   } = useQuery({
     queryKey: ["jobs"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/jobs", {
+      const res = await fetch("https://assignment-11-api.vercel.app/jobs", {
         credentials: "include",
       });
       return res.json();
@@ -20,7 +20,11 @@ export default function JobTabs() {
   });
 
   if (isPending) {
-    return <span className="loading loading-spinner text-primary"></span>;
+    return (
+      <div className="flex justify-center w-full">
+        <span className="text-primary loading loading-spinner size-40"></span>
+      </div>
+    );
   }
 
   if (isError) {

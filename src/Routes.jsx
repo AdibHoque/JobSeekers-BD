@@ -39,7 +39,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({params}) =>
-          fetch(`http://localhost:5000/jobs?id=${params.id}`, {
+          fetch(`https://assignment-11-api.vercel.app/jobs?id=${params.id}`, {
             credentials: "include",
           }),
       },
@@ -83,7 +83,7 @@ const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({params}) =>
-          fetch(`http://localhost:5000/jobs?id=${params.id}`, {
+          fetch(`https://assignment-11-api.vercel.app/jobs?id=${params.id}`, {
             credentials: "include",
           }),
       },

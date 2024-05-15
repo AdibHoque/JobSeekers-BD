@@ -31,7 +31,7 @@ export default function Login() {
     <>
       <div className="hero min-h-[88vh] bg-base-200 animate__animated animate__slideInLeft">
         <div className="w-full hero-content flex flex-col lg:flex-row gap-x-10">
-          <img className="w-96" src={loginVector} alt="" />
+          <img src={loginVector} className="w-96" alt="" />
           <div className="w-full max-w-md border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <caption className="text-2xl font-bold text-primary">
@@ -79,18 +79,14 @@ export default function Login() {
                   </Link>
                 </label>
               </div>
-              <div className="flex items-center justify-center gap-5">
+              <div className="divider">OR</div>
+              <div className="w-full flex items-center justify-center">
                 <a
                   onClick={googleLogIn}
-                  className="text-3xl btn btn-circle border hover:border-primary"
+                  className=" btn border hover:border-primary border-slate-400 rounded-3xl"
                 >
-                  <FcGoogle />
-                </a>
-                <a
-                  onClick={githubLogIn}
-                  className="text-3xl btn btn-circle border hover:border-primary"
-                >
-                  <FaGithub />
+                  <FcGoogle className="text-3xl" />
+                  Sign in with Google
                 </a>
               </div>
               <div className="mt-2 form-control">
