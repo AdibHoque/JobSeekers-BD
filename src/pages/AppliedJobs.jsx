@@ -53,7 +53,7 @@ export default function AppliedJobs() {
           List of Jobs that you have applied for.
         </p>
       </div>
-      <div className="w-full flex gap-2 justify-between items-center">
+      <div className="w-full flex gap-2 justify-between items-end">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Search by Category</span>
@@ -71,7 +71,10 @@ export default function AppliedJobs() {
             <option>Hybrid</option>
           </select>
         </div>
-        <button onClick={() => generatePDF(targetRef, {filename: "page.pdf"})}>
+        <button
+          className="btn font-bold"
+          onClick={() => generatePDF(targetRef, {filename: "page.pdf"})}
+        >
           Download PDF
         </button>
       </div>

@@ -27,8 +27,8 @@ export default function NavBar() {
   const match = useMatch("/login");
   const navClass = ({isActive, isPending}) =>
     isPending || isActive
-      ? "btn btn-link text-primary border-2 rounded-xs font-extrabold no-underline hover:no-underline"
-      : "btn btn-link border-2 font-bold rounded-xs text-black no-underline hover:no-underline hover:text-primary";
+      ? "btn btn-link text-primary border-2 rounded-xs font-extrabold no-underline hover:no-underline hover:bg-transparent"
+      : "btn btn-link border-2 font-bold rounded-xs text-black no-underline hover:no-underline hover:text-primary hover:bg-transparent";
   const links = (
     <>
       <li>

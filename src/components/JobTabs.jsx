@@ -2,6 +2,7 @@ import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Card from "./Card";
 import {useQuery} from "@tanstack/react-query";
+import {motion} from "framer-motion";
 
 export default function JobTabs() {
   const {
@@ -49,43 +50,48 @@ export default function JobTabs() {
             <Tab>Part-Time</Tab>
             <Tab>Hybrid</Tab>
           </TabList>
-
-          <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs
-                .filter((d) => d.category == "Onsite")
-                .map((t) => (
-                  <Card key={t._id} data={t}></Card>
-                ))}
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs
-                .filter((d) => d.category == "Remote")
-                .map((t) => (
-                  <Card key={t._id} data={t}></Card>
-                ))}
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs
-                .filter((d) => d.category == "Part-Time")
-                .map((t) => (
-                  <Card key={t._id} data={t}></Card>
-                ))}
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {jobs
-                .filter((d) => d.category == "Hybrid")
-                .map((t) => (
-                  <Card key={t._id} data={t}></Card>
-                ))}
-            </div>
-          </TabPanel>
+          <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 1}}
+          >
+            <TabPanel>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {jobs
+                  .filter((d) => d.category == "Onsite")
+                  .map((t) => (
+                    <Card key={t._id} data={t}></Card>
+                  ))}
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {jobs
+                  .filter((d) => d.category == "Remote")
+                  .map((t) => (
+                    <Card key={t._id} data={t}></Card>
+                  ))}
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {jobs
+                  .filter((d) => d.category == "Part-Time")
+                  .map((t) => (
+                    <Card key={t._id} data={t}></Card>
+                  ))}
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {jobs
+                  .filter((d) => d.category == "Hybrid")
+                  .map((t) => (
+                    <Card key={t._id} data={t}></Card>
+                  ))}
+              </div>
+            </TabPanel>
+          </motion.div>
         </Tabs>
       </div>
     );
