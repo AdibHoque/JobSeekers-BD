@@ -6,8 +6,8 @@ export default function Banner() {
     <>
       <div className="hero pb-8 md:py-8 bg-[#B5E1F6] lg:px-24 lg:rounded-b-[33%]">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src={banner} className="max-w-md" />
-          <div>
+          <img src={banner} className="max-w-md animate-fade-left" />
+          <div className="animate-fade-right">
             <h1 className="text-4xl md:text-5xl font-bold text-[#190D5B]">
               Discover Your Career Path with JobSeekers
             </h1>

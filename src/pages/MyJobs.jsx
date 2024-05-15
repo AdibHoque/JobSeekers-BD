@@ -75,7 +75,7 @@ export default function MyJobs() {
         <input
           onChange={(e) => setSearch(e.target.value)}
           type="text"
-          className="grow"
+          className="grow bg-transparent"
           placeholder="Search Job"
         />
         <svg
@@ -102,7 +102,7 @@ export default function MyJobs() {
               <th></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="animate-flip-down">
             {myjobs
               .filter((j) =>
                 j.job_title.toLowerCase().includes(search.toLowerCase())

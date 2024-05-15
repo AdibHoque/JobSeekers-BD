@@ -37,7 +37,7 @@ export default function FAQ() {
         </p>
       </div>
       <div className="hero">
-        <div className="hero-content flex-col lg:flex-row">
+        <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={faqimage} className="w-1/2 p-6 hidden lg:block h-[70vh]" />
           <div>
             <div className="w-full join join-vertical">

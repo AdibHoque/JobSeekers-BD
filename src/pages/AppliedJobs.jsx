@@ -72,7 +72,7 @@ export default function AppliedJobs() {
           </select>
         </div>
         <button
-          className="btn font-bold"
+          className="btn font-bold bg-red-600 text-white"
           onClick={() => generatePDF(targetRef, {filename: "page.pdf"})}
         >
           Download PDF
@@ -88,7 +88,7 @@ export default function AppliedJobs() {
               <th>Resume</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="animate-flip-down">
             {myjobs
               .filter((j) =>
                 j.category.toLowerCase().includes(search.toLowerCase())

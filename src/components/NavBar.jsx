@@ -27,8 +27,8 @@ export default function NavBar() {
   const match = useMatch("/login");
   const navClass = ({isActive, isPending}) =>
     isPending || isActive
-      ? "btn btn-link text-primary border-2 rounded-xs font-extrabold no-underline hover:no-underline hover:bg-transparent"
-      : "btn btn-link border-2 font-bold rounded-xs text-black no-underline hover:no-underline hover:text-primary hover:bg-transparent";
+      ? "btn btn-link text-primary border-2 rounded-xs font-extrabold no-underline hover:no-underline hover:bg-transparent focus:bg-transparent focus-visible:bg-transparent"
+      : "btn btn-link border-2 font-bold rounded-xs text-black no-underline hover:no-underline hover:text-primary hover:bg-transparent focus:bg-transparent focus-visible:bg-transparent";
   const links = (
     <>
       <li>
@@ -70,13 +70,13 @@ export default function NavBar() {
     </>
   );
   return (
-    <div className="h-full px-2 md:8 navbar bg-[#B5E1F6] lg:px-24">
+    <div className="h-full px-2 md:8 navbar bg-[#B5E1F6] lg:px-24 ">
       <div className="navbar-start">
         <Link className="flex items-center justify-start gap-1 mb-0 text-2xl font-bold md:text-2xl lg:leading-none lg:text-2xl text-[#190D5B]">
           <img src={logo} className="size-12" /> JobSeekers
         </Link>
       </div>
-      <div className="hidden navbar-center lg:flex">
+      <div className="hidden navbar-center lg:flex animate-fade-down">
         <ul className="menu menu-horizontal">{links}</ul>
       </div>
       <div className="flex navbar-end gap-x-2">
@@ -88,7 +88,7 @@ export default function NavBar() {
           <svg
             data-tooltip-id="theme-tooltip"
             data-tooltip-content="Dark Theme"
-            className="w-10 h-10 fill-current swap-off text-yellow-500"
+            className="w-10 h-10 fill-current swap-off text-yellow-500 animate-spin animate-once"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
