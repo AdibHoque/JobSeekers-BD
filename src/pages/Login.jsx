@@ -8,7 +8,7 @@ import {FaEyeSlash, FaEye} from "react-icons/fa";
 import loginVector from "../assets/Login-amico.svg";
 
 export default function Login() {
-  const {user, logIn, errorMessage, googleLogIn, githubLogIn} =
+  const {user, logIn, errorMessage, googleLogIn} =
     useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();

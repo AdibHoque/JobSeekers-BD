@@ -8,7 +8,7 @@ import {FaEyeSlash, FaEye} from "react-icons/fa";
 import registerVector from "../assets/Sign up-amico.svg";
 
 export default function Register() {
-  const {user, createUser, errorMessage, googleLogIn, githubLogIn} =
+  const {user, createUser, errorMessage, googleLogIn} =
     useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
