@@ -6,12 +6,12 @@ import Testimons from "../components/Testimons";
 
 export default function Home() {
   return (
-    <>
+    <div className="space-y-12">
       <Banner></Banner>
       <JobTabs></JobTabs>
       <Testimons></Testimons>
       <FAQ></FAQ>
       <Contact></Contact>
-    </>
+    </div>
   );
 }

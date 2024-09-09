@@ -57,7 +57,7 @@ export default function UpdateJob() {
   return (
     <div className="bg-base-200 lg:px-24">
       <div className="py-6">
-        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary uppercase">
           Update Job
         </h1>
         <p className="text-center my-1">

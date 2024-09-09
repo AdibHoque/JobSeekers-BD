@@ -27,8 +27,8 @@ export default function FAQ() {
       .then((data) => setData(data));
   }, []);
   return (
-    <>
-      <div className="mt-10">
+    <div className="lg:px-20">
+      <div className="mt-6">
         <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
           FAQ
         </h1>
@@ -52,6 +52,6 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

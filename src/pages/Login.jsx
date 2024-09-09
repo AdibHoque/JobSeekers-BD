@@ -8,8 +8,7 @@ import {FaEyeSlash, FaEye} from "react-icons/fa";
 import loginVector from "../assets/Login-amico.svg";
 
 export default function Login() {
-  const {user, logIn, errorMessage, googleLogIn} =
-    useContext(AuthContext);
+  const {user, logIn, errorMessage, googleLogIn} = useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,7 +33,7 @@ export default function Login() {
           <img src={loginVector} className="w-96" alt="" />
           <div className="w-full max-w-md border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
-              <caption className="text-2xl font-bold text-primary">
+              <caption className="text-2xl font-bold text-primary uppercase">
                 Login
               </caption>
               <div className="form-control">

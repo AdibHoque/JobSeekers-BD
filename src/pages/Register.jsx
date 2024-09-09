@@ -8,8 +8,7 @@ import {FaEyeSlash, FaEye} from "react-icons/fa";
 import registerVector from "../assets/Sign up-amico.svg";
 
 export default function Register() {
-  const {user, createUser, errorMessage, googleLogIn} =
-    useContext(AuthContext);
+  const {user, createUser, errorMessage, googleLogIn} = useContext(AuthContext);
   const [showpass, setShowpass] = useState(false);
   const navigate = useNavigate();
 
@@ -35,7 +34,7 @@ export default function Register() {
           <img className="w-96" src={registerVector} alt="" />
           <div className="flex-1 w-full md:w-96 border-2 border-primary rounded-xs shadow-2xl card bg-base-100">
             <form onSubmit={handleRegister} className="card-body w-full">
-              <caption className="text-2xl font-bold text-primary">
+              <caption className="text-2xl font-bold text-primary uppercase">
                 Register
               </caption>
               <div className="form-control">

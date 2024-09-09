@@ -46,7 +46,7 @@ export default function AppliedJobs() {
   return (
     <div className="lg:px-24 px-4">
       <div className="my-6">
-        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary uppercase">
           Applied Jobs
         </h1>
         <p className="text-center my-1">

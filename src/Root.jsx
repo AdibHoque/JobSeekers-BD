@@ -1,11 +1,11 @@
 import {Outlet} from "react-router-dom";
-import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import Navbar from "./components/NavBar";
 
 export default function Root() {
   return (
     <>
-      <NavBar></NavBar>
+      <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>
     </>

@@ -31,69 +31,68 @@ export default function JobTabs() {
   if (isError) {
     return <p>{error.message}</p>;
   }
-  if (jobs.length > 1) {
-    return (
-      <div className="px-4 lg:px-24 mb-8">
-        <div className="my-6">
-          <h1 className="text-4xl text-center md:text-5xl font-bold text-primary ">
-            Jobs by Category
-          </h1>
-          <p className="text-center my-1">
-            Discover career opportunities tailored to your preferences by
-            exploring jobs categorized by industry
-          </p>
-        </div>
-        <Tabs>
-          <TabList>
-            <Tab>On Site</Tab>
-            <Tab>Remote</Tab>
-            <Tab>Part-Time</Tab>
-            <Tab>Hybrid</Tab>
-          </TabList>
-          <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: 1}}
-          >
-            <TabPanel>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {jobs
-                  .filter((d) => d.category == "Onsite")
-                  .map((t) => (
-                    <Card key={t._id} data={t}></Card>
-                  ))}
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {jobs
-                  .filter((d) => d.category == "Remote")
-                  .map((t) => (
-                    <Card key={t._id} data={t}></Card>
-                  ))}
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {jobs
-                  .filter((d) => d.category == "Part-Time")
-                  .map((t) => (
-                    <Card key={t._id} data={t}></Card>
-                  ))}
-              </div>
-            </TabPanel>
-            <TabPanel>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {jobs
-                  .filter((d) => d.category == "Hybrid")
-                  .map((t) => (
-                    <Card key={t._id} data={t}></Card>
-                  ))}
-              </div>
-            </TabPanel>
-          </motion.div>
-        </Tabs>
+
+  return (
+    <div className="px-4 lg:px-24 mb-8">
+      <div className="my-6">
+        <h1 className="text-4xl text-center md:text-5xl font-bold text-primary uppercase">
+          Jobs by Category
+        </h1>
+        <p className="text-center my-1">
+          Discover career opportunities tailored to your preferences by
+          exploring jobs categorized by industry
+        </p>
       </div>
-    );
-  }
+      <Tabs>
+        <TabList>
+          <Tab>On Site</Tab>
+          <Tab>Remote</Tab>
+          <Tab>Part-Time</Tab>
+          <Tab>Hybrid</Tab>
+        </TabList>
+        <motion.div
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{duration: 1}}
+        >
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {jobs
+                .filter((d) => d.category == "Onsite")
+                .map((t) => (
+                  <Card key={t._id} data={t}></Card>
+                ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {jobs
+                .filter((d) => d.category == "Remote")
+                .map((t) => (
+                  <Card key={t._id} data={t}></Card>
+                ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {jobs
+                .filter((d) => d.category == "Part-Time")
+                .map((t) => (
+                  <Card key={t._id} data={t}></Card>
+                ))}
+            </div>
+          </TabPanel>
+          <TabPanel>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {jobs
+                .filter((d) => d.category == "Hybrid")
+                .map((t) => (
+                  <Card key={t._id} data={t}></Card>
+                ))}
+            </div>
+          </TabPanel>
+        </motion.div>
+      </Tabs>
+    </div>
+  );
 }

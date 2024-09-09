@@ -103,7 +103,7 @@ export default function JobDetails() {
               {new Date(application_deadline).toLocaleDateString("en-GB")}
             </p>
           </div>
-          <div className="w-full flex items-center justify-center mt-4">
+          <div className="w-full flex justify-center mt-4">
             {/* Open the modal using document.getElementById('ID').showModal() method */}
             <button
               className="btn btn-primary font-bold"

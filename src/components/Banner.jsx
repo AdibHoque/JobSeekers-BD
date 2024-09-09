@@ -19,14 +19,11 @@ export default function Banner() {
             </p>
             <Link
               to="/addjob"
-              className="btn text-center btn-secondary font-bold mx-1"
+              className="btn text-center btn-primary font-bold mx-1"
             >
               HIRE EMPLOYEE
             </Link>
-            <Link
-              to="/jobs"
-              className="btn btn-primary font-bold btn-outline mx-1"
-            >
+            <Link to="/jobs" className="btn  btn-secondary font-bold  mx-1">
               GET HIRED
             </Link>
           </div>
